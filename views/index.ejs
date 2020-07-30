@@ -29,9 +29,12 @@
   <h2>Membres de l'équipage</h2>
   <table>
   <tbody>
-  	 <% for (user of users) { %>
+  	 <% for (let i = 0; i < users.length ; i++) { %>
+
      <tr>
-        <td><h3><%= user.name %></h3> </td>
+        <td><h3><%= users[i].name %></h3> </td>
+        <td><% if (i < users.length-1) { %><h3> <%= users[++i].name %> </h3> <% } %></td>
+        <td><% if (i < users.length-1) { %><h3> <%= users[++i].name %> </h3> <% } %></td>
      </tr>
    <% } %>
   </tbody>
